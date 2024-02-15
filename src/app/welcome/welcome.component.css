@@ -1,0 +1,28 @@
+* {
+    font-family: 'Times New Roman';
+}
+body{
+    border: 2px solid black;
+
+}
+h1, h2{
+    text-align: center;
+    background-color: bisque;
+    color: black;
+}
+
+li{
+    /* display: flex; */
+    display: inline-block;
+}
+
+a {
+    text-align: center;
+    display: block; /* Make the link a block-level element for better styling */
+    margin: 20px auto; /* Center the link */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid black; /* Fix the border style */
+    width: fit-content; /* Make the link width fit its content */
+    text-decoration: none; /* Remove default link underline */
+    color: black; /* Set link color */
+  }

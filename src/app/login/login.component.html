@@ -1,0 +1,46 @@
+<!-- <body>
+    <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngmodel)]="username">
+
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" [(ngmodel)]="password">
+
+    </div>
+
+    <h2></h2>
+    <button (click)="onsubmit()">Login</button>
+    <div *ngIf="ischecked()">
+        <div *ngIf="isvalid()">
+            <h3>Welcome, {{username}}</h3>
+            <a href="/passenger">Click here to book tickets</a>
+
+        </div>
+    </div>
+</body> -->
+
+<!-- <p>login works!</p> -->
+<form>
+    <div align="center">
+        <label for="username">ENTER USERNAME:</label>
+        <input type="text" name="username" [(ngModel)]="username">
+    </div><br>
+    <div align="center">
+        <label for="password">PASSWORD:</label>
+        <input type="password" name="password" [(ngModel)]="password">
+    </div><br>
+    <div align="center">
+        <button (click)="check()">Login</button>
+    </div><br>
+    <div *ngIf="ischecked">
+        <div *ngIf="isvalidate">
+            <h2>Welcome {{username}}! You are successfully logged in.</h2>
+            <!-- <a href="/display"></a> -->
+            <a routerLink="/passenger">Click to Continue</a>
+        </div>
+        <div *ngIf="!isvalidate">
+            <h2>Invalid username or password. Please try again.</h2>
+            <a routerLink="/login">Click to Re-enter</a>
+        </div>
+    </div>
+    </form>

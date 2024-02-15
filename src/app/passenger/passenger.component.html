@@ -1,0 +1,81 @@
+<!-- <p>passenger works!</p>
+<form>
+    <div>
+        <label for="pname">Name:</label>
+        <input type="text" name="pname" id="pname" [(ngmodel)]="pname">
+    </div>
+
+    <div>
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" [(ngmodel)]="phone" >
+    </div>
+
+    <div>
+        <label for="source">source</label>
+        <input type="text" name="source" [(ngmodel)]="source" >
+    </div>
+
+    <div>
+        <label for="destination">destination</label>
+        <input type="text" name="destination" [(ngmodel)]="destination" >
+    </div>
+
+    <div>
+        <label for="nop">Number of Passengers</label>
+        <input type="number" name="nop" [(ngmodel)]="nop" >
+    </div>
+
+     <div>
+    <button (click)="checkflight()">Check for flights</button>
+
+     </div>
+        <div *ngIf="isthere">
+            <div *ngIf="ispresent">
+            name: {{ name }}
+            </div>
+            <div *ngif="!ispresent">
+                No Flight available. Please try another day or time.
+            </div>
+        </div>
+</form> -->
+
+<body>
+    <div align="center">
+        <label for="pname">Name:</label>
+        <input type="text" name="pname" id="pname" [(ngModel)]="name">
+    </div><br>
+    <div align="center">
+        <label for="phone">Phone:</label>
+        <input type="number" name="phone" id="phone" [(ngModel)]="phone">
+    </div><br>
+    <div align="center">
+        <label for="source">Source:</label>
+        <input type="text" name="source" id="source" [(ngModel)]="source">
+    </div><br>
+    <div align="center">
+        <label for="destination">Destination:</label>
+        <input type="text" name="destination" id="destination" [(ngModel)]="destination">
+    </div><br>
+    <div align="center">
+        <label for="nop">Number Of Passengers:</label>
+        <input type="number" name="nop" id="nop" [(ngModel)]="nop">
+    </div><br>
+    <button (click)="checkflight()">Check For Flights</button>
+    <h3 *ngIf="isthere" align="center">
+        <div *ngIf="ispresent" align="center">
+            <p>FLIGHT BOOKED SUCCESSFULLY</p>
+            <p>Name: {{ name }}</p>
+            <p>Phone: {{ phone }}</p>
+            <p>Source: {{ source }}</p>
+            <p>Destination: {{ destination }}</p>
+            <p>Number of Passengers: {{ nop }}</p>
+            <p>Total Price: {{ totalprice }}</p>
+            <p>HAPPY JOURNEYYYY!!!!!!!!!!!!!!!!!!!!!</p>
+            <a href="/login">LOGOUT</a>
+        </div>
+        <div *ngIf="!ispresent" align="center">
+            <p>No flights found for the provided source and destination.</p>
+            <a href="/passenger">CHECK FOR SOME OTHER FLIGHT</a>
+        </div>
+    </h3>
+</body>
